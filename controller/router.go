@@ -2,7 +2,7 @@ package controller
 
 import (
 	"github.com/gorilla/mux"
-  "github.com/customer-api/server/middleware"
+	// "github.com/mockup-broker/middleware"
 )
 
 func NewRouter() *mux.Router {
@@ -12,7 +12,7 @@ func NewRouter() *mux.Router {
 			Methods(route.Method).
 			Path(route.Pattern).
 			Name(route.Name).
-			ConsoleLog(HttpBaseAuth(Handler(route.HandlerFunc)))
+			Handler(route.HandlerFunc)
 	}
 	return router
 }

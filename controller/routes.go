@@ -13,13 +13,11 @@ type Route struct {
 
 type Routes []Route
 
-var routes =  {
-	return &Routes{
-		Route{
-			"Catalog",
-			"GET",
-			"/v2/catalog",
-			GetCatalog,
-		}
-	}
+var routes = Routes{
+	Route{
+		"Catalog",
+		"GET",
+		"/v2/catalog",
+		GetCatalog,
+	},
 }
